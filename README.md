@@ -34,6 +34,8 @@ On top of engineering features from the original dataset, I derived more feature
 
 I experimented with several regression techniques and the results are as follows:
 
-| Model | Lasso  | Ridge  | Random Forest | Lightgbm | Multi-Layer-Perceptron |
+| Model | Lasso  | Ridge  | Random Forest | Lightgbm | Multi-Layer-Perceptron | 
 | :---: | :-:    | :-:    | :-:           | :-:      | :-:                    |
 | RMSE  | 0.2183 | 0.2183 | 0.1226        | 0.1167   | 0.0964                 |
+
+I created a new dataset using the predictions from the 5 models shown in the table above. With this stacked dataset, I trained another Multi-Layer-Perceptron to generate the stacked ensemble model for final prediction. The ensemble model incurred an RMSE of 0.0742, lower than any of the 5 models.
